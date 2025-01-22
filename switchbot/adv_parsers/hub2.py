@@ -31,7 +31,6 @@ def process_wohub2(data: bytes | None, mfr_data: bytes | None) -> dict[str, Any]
     _wohub2_data = {
         # Data should be flat, but we keep the original structure for now
         "temp": {"c": _temp_c, "f": _temp_f},
-        "temperature": _temp_c,
         "sensor_temperature": _temp_c,
         "fahrenheit": bool(temp_data[2] & 0b10000000),
         "humidity": humidity,
